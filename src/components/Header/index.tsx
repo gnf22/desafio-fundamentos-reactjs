@@ -10,14 +10,17 @@ interface HeaderProps {
   size?: 'small' | 'large';
 }
 
+interface RepositoryParams {
+  repository: string;
+}
+
 const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
   <Container size={size}>
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {
-          // Todo
-        }
+        <Link to="/">Dashboard</Link>
+        <Link to="/import">Importar</Link>
       </nav>
     </header>
   </Container>
